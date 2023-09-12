@@ -22,7 +22,7 @@
 		63199FE029980AB9002F50F0 /* Load up Installed Packages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199FDF29980AB9002F50F0 /* Load up Installed Packages.swift */; };
 		6325561E2AA3CDE50032133D /* Apply Uninstallation Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325561D2AA3CDE50032133D /* Apply Uninstallation Spinner.swift */; };
 		632FD290299591C10029FC49 /* Get Folder Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD28F299591C10029FC49 /* Get Folder Size.swift */; };
-		632FD292299596790029FC49 /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD291299596790029FC49 /* HelpButton.swift */; };
+		632FD292299596790029FC49 /* Help Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD291299596790029FC49 /* Help Button.swift */; };
 		632FD2952995A3920029FC49 /* Add Tap View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD2942995A3920029FC49 /* Add Tap View.swift */; };
 		632FD2972995A7E50029FC49 /* Nicer Text Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD2962995A7E50029FC49 /* Nicer Text Editor.swift */; };
 		632FD2992995BF490029FC49 /* Load up Tapped Taps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FD2982995BF490029FC49 /* Load up Tapped Taps.swift */; };
@@ -52,6 +52,7 @@
 		6342118029AA9CBB00E2563B /* Maintenance Pane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6342117F29AA9CBB00E2563B /* Maintenance Pane.swift */; };
 		6342118329AA9CF100E2563B /* Ready View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6342118229AA9CF100E2563B /* Ready View.swift */; };
 		634838A629C1D69F00D3C692 /* Outdated Package Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634838A529C1D69F00D3C692 /* Outdated Package Tracker.swift */; };
+		6354F1C32AB115C500F1D797 /* Resolve Symlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6354F1C22AB115C500F1D797 /* Resolve Symlink.swift */; };
 		635A50E929B7723C00164FBA /* Get Pin Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A50E829B7723C00164FBA /* Get Pin Status.swift */; };
 		635A50EB29B7740000164FBA /* Pin an Unpin Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A50EA29B7740000164FBA /* Pin an Unpin Package.swift */; };
 		635BE04E2A2B3818004DCBD8 /* Casks Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE04D2A2B3818004DCBD8 /* Casks Section.swift */; };
@@ -105,7 +106,7 @@
 		63A38B9829BA0B910080158C /* Package Updating Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A38B9729BA0B910080158C /* Package Updating Steps.swift */; };
 		63A87465298FE7FC009F9533 /* Search for Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A87464298FE7FC009F9533 /* Search for Package.swift */; };
 		63A87468298FE811009F9533 /* Package Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A87467298FE811009F9533 /* Package Types.swift */; };
-		63A8746A2990127D009F9533 /* PillText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A874692990127D009F9533 /* PillText.swift */; };
+		63A8746A2990127D009F9533 /* Pill Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A874692990127D009F9533 /* Pill Text.swift */; };
 		63A8746C2990477A009F9533 /* Uninstall Packages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8746B2990477A009F9533 /* Uninstall Packages.swift */; };
 		63A8746E29904A7F009F9533 /* App State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8746D29904A7F009F9533 /* App State.swift */; };
 		63A8D2F129CA343F00E892FB /* Save Tagged IDs to Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8D2F029CA343F00E892FB /* Save Tagged IDs to Disk.swift */; };
@@ -196,7 +197,7 @@
 		63199FDF29980AB9002F50F0 /* Load up Installed Packages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Load up Installed Packages.swift"; sourceTree = "<group>"; };
 		6325561D2AA3CDE50032133D /* Apply Uninstallation Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apply Uninstallation Spinner.swift"; sourceTree = "<group>"; };
 		632FD28F299591C10029FC49 /* Get Folder Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Get Folder Size.swift"; sourceTree = "<group>"; };
-		632FD291299596790029FC49 /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
+		632FD291299596790029FC49 /* Help Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Help Button.swift"; sourceTree = "<group>"; };
 		632FD2942995A3920029FC49 /* Add Tap View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add Tap View.swift"; sourceTree = "<group>"; };
 		632FD2962995A7E50029FC49 /* Nicer Text Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nicer Text Editor.swift"; sourceTree = "<group>"; };
 		632FD2982995BF490029FC49 /* Load up Tapped Taps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Load up Tapped Taps.swift"; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		6342117F29AA9CBB00E2563B /* Maintenance Pane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Maintenance Pane.swift"; sourceTree = "<group>"; };
 		6342118229AA9CF100E2563B /* Ready View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ready View.swift"; sourceTree = "<group>"; };
 		634838A529C1D69F00D3C692 /* Outdated Package Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Outdated Package Tracker.swift"; sourceTree = "<group>"; };
+		6354F1C22AB115C500F1D797 /* Resolve Symlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolve Symlink.swift"; sourceTree = "<group>"; };
 		635A50E829B7723C00164FBA /* Get Pin Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Get Pin Status.swift"; sourceTree = "<group>"; };
 		635A50EA29B7740000164FBA /* Pin an Unpin Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin an Unpin Package.swift"; sourceTree = "<group>"; };
 		635BE04D2A2B3818004DCBD8 /* Casks Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Casks Section.swift"; sourceTree = "<group>"; };
@@ -280,7 +282,7 @@
 		63A38B9729BA0B910080158C /* Package Updating Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package Updating Steps.swift"; sourceTree = "<group>"; };
 		63A87464298FE7FC009F9533 /* Search for Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search for Package.swift"; sourceTree = "<group>"; };
 		63A87467298FE811009F9533 /* Package Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package Types.swift"; sourceTree = "<group>"; };
-		63A874692990127D009F9533 /* PillText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillText.swift; sourceTree = "<group>"; };
+		63A874692990127D009F9533 /* Pill Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pill Text.swift"; sourceTree = "<group>"; };
 		63A8746B2990477A009F9533 /* Uninstall Packages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uninstall Packages.swift"; sourceTree = "<group>"; };
 		63A8746D29904A7F009F9533 /* App State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App State.swift"; sourceTree = "<group>"; };
 		63A8D2F029CA343F00E892FB /* Save Tagged IDs to Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Save Tagged IDs to Disk.swift"; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 			isa = PBXGroup;
 			children = (
 				6342117729AA500300E2563B /* Check if URL is Symlink.swift */,
+				6354F1C22AB115C500F1D797 /* Resolve Symlink.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -899,8 +902,8 @@
 			isa = PBXGroup;
 			children = (
 				63D8C956287A1D0800483A52 /* Loading View.swift */,
-				632FD291299596790029FC49 /* HelpButton.swift */,
-				63A874692990127D009F9533 /* PillText.swift */,
+				632FD291299596790029FC49 /* Help Button.swift */,
+				63A874692990127D009F9533 /* Pill Text.swift */,
 				63A90D8A2AA268C700CEC48E /* Sanitized Package Name.swift */,
 				63C830C029984BA4002D11BB /* Button That Opens Websites.swift */,
 				63A96F732AA520120029E33B /* Inline Fatal Error.swift */,
@@ -1330,6 +1333,7 @@
 				63D8C957287A1D0800483A52 /* Loading View.swift in Sources */,
 				63FFE57E2A90D9E300F95E54 /* Day Spans.swift in Sources */,
 				63E716E029DDC03E004FD2B4 /* Outdated Package.swift in Sources */,
+				6354F1C32AB115C500F1D797 /* Resolve Symlink.swift in Sources */,
 				6340657F2871AF68001A2178 /* App Constants.swift in Sources */,
 				639246E729A382B1008149E2 /* Uninstallation Progress Wheel.swift in Sources */,
 				63A96F6E2AA4B3D90029E33B /* Add Tap.swift in Sources */,
@@ -1340,9 +1344,9 @@
 				634065672871AA42001A2178 /* ContentView.swift in Sources */,
 				6360355A29BDF67B00CC0760 /* Update Availability.swift in Sources */,
 				637402DA299BF878001AB7B1 /* Sidebar View.swift in Sources */,
-				63A8746A2990127D009F9533 /* PillText.swift in Sources */,
+				63A8746A2990127D009F9533 /* Pill Text.swift in Sources */,
 				6382C90C299DA46100354B19 /* Perform Brew Health Check.swift in Sources */,
-				632FD292299596790029FC49 /* HelpButton.swift in Sources */,
+				632FD292299596790029FC49 /* Help Button.swift in Sources */,
 				63D8310A299982EA00FA802F /* Search Result Row.swift in Sources */,
 				63A8746E29904A7F009F9533 /* App State.swift in Sources */,
 				63A87468298FE811009F9533 /* Package Types.swift in Sources */,

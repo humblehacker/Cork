@@ -8,6 +8,11 @@
 import Foundation
 import SwiftyJSON
 
+enum CaskFolderResolutionError: Error
+{
+    case couldNotFindCaskSubfolder, couldNotFindSymlinkInSymlinkFolder
+}
+
 func getContentsOfFolder(targetFolder: URL, appState: AppState) async -> [BrewPackage]
 {
     var contentsOfFolder: [BrewPackage] = .init()
@@ -43,7 +48,7 @@ func getContentsOfFolder(targetFolder: URL, appState: AppState) async -> [BrewPa
                 /// What the fuck?
                 let installedOn: Date? = (try? FileManager.default.attributesOfItem(atPath: targetFolder.appendingPathComponent(item, conformingTo: .folder).path))?[.creationDate] as? Date
 
-                let folderSizeRaw: Int64? = directorySize(url: targetFolder.appendingPathComponent(item, conformingTo: .directory))
+                var folderSizeRaw: Int64? = directorySize(url: targetFolder.appendingPathComponent(item, conformingTo: .directory))
 
                 print("\n Installation date for package \(item) at path \(targetFolder.appendingPathComponent(item, conformingTo: .directory)) is \(installedOn ?? Date()) \n")
 
@@ -78,7 +83,40 @@ func getContentsOfFolder(targetFolder: URL, appState: AppState) async -> [BrewPa
                 }
                 else
                 {
-                    contentsOfFolder.append(BrewPackage(name: item, isCask: true, installedOn: installedOn, versions: temporaryVersionStorage, sizeInBytes: folderSizeRaw))
+                    print("Package at path \(targetFolder.appendingPathComponent(item, conformingTo: .fileURL)) is a cask - will try to resolve symlink if there is one")
+
+                    do
+                    {
+                        let urlsInCaskFolder: [URL] = try FileManager.default.contentsOfDirectory(at: targetFolder.appendingPathComponent(item, conformingTo: .fileURL), includingPropertiesForKeys: [.isDirectoryKey])
+                        guard let urlOfCaskSymlinkFolder: URL = urlsInCaskFolder.first else
+                        {
+                            throw CaskFolderResolutionError.couldNotFindCaskSubfolder
+                        }
+
+                        let contentsOfActualCaskFolder: [URL] = try FileManager.default.contentsOfDirectory(at: urlOfCaskSymlinkFolder, includingPropertiesForKeys: [.isSymbolicLinkKey])
+
+                        for possibleSymlink in contentsOfActualCaskFolder
+                        {
+                            if isSymlink(at: possibleSymlink)
+                            {
+                                print("\(possibleSymlink) is a symlink")
+
+                                folderSizeRaw = directorySize(url: resolveSymlink(at: possibleSymlink))
+
+                                contentsOfFolder.append(BrewPackage(name: item, isCask: true, installedOn: installedOn, versions: temporaryVersionStorage, sizeInBytes: folderSizeRaw))
+                            }
+                            else
+                            {
+                                print("\(possibleSymlink) is not a symlink")
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        print("Silently failed while loading sub-folder in \(targetFolder.appendingPathComponent(item, conformingTo: .fileURL)) - will just list the size of the folder itself")
+
+                        contentsOfFolder.append(BrewPackage(name: item, isCask: true, installedOn: installedOn, versions: temporaryVersionStorage, sizeInBytes: folderSizeRaw))
+                    }
                 }
 
                 temporaryVersionStorage = [String]()
