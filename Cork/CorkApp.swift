@@ -160,6 +160,7 @@ struct CorkApp: App
                         setAppBadge(outdatedPackageNotificationType: outdatedPackageNotificationType)
                     }
                 }
+            /*
                 .onChange(of: cachedDownloadsObserver.files) { newValue in
                     print("A change detected in cached downloads folder: \(newValue)")
                     
@@ -169,6 +170,7 @@ struct CorkApp: App
 
                     print("New directory size: \(appDelegate.appState.cachedDownloadsFolderSize)")
                 }
+             */
         }
         .commands
         {
