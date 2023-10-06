@@ -21,6 +21,8 @@ struct CorkApp: App
     @StateObject var updateProgressTracker = UpdateProgressTracker()
     @StateObject var outdatedPackageTracker = OutdatedPackageTracker()
 
+    @StateObject var cachedDownloadsObserver: FolderObservable = .init(folderUrl: AppConstants.brewCachedDownloadsPath)
+
     @Environment(\.openWindow) private var openWindow
     @AppStorage("showInMenuBar") var showInMenuBar = false
 
@@ -157,6 +159,15 @@ struct CorkApp: App
                     {
                         setAppBadge(outdatedPackageNotificationType: outdatedPackageNotificationType)
                     }
+                }
+                .onChange(of: cachedDownloadsObserver.files) { newValue in
+                    print("A change detected in cached downloads folder: \(newValue)")
+                    
+                    print("Old directory size: \(appDelegate.appState.cachedDownloadsFolderSize)")
+
+                    appDelegate.appState.cachedDownloadsFolderSize = directorySize(url: AppConstants.brewCachedDownloadsPath)
+
+                    print("New directory size: \(appDelegate.appState.cachedDownloadsFolderSize)")
                 }
         }
         .commands
